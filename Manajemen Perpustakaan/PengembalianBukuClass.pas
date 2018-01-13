@@ -1,8 +1,8 @@
-Class Siswa
+Class PengembalianBuku
 
 	index()
 		try
-			select all data from table siswa
+			select all data from table pengembalianbuku
 			show to view
 		catch
 			get exception
@@ -15,16 +15,16 @@ Class Siswa
 
 	store()
 		try
-			get nisn
-			get kelas
-			get nama
-			get alamat
-			get notelp
+			get idpengembalian
+			get idpetugas
+			get idbuku
+			get tanggalpinjam
+			get denda
 
-			if nisn are exists on table siswa
-				show alert "Data dengan nisn tidak boleh sama"
+			if idpengembalian are exists on table pengembalianbuku
+				show alert "Data dengan idpengembalian tidak boleh sama"
 			else
-				save record to table siswa
+				save record to table pengembalianbuku
 				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
@@ -32,7 +32,7 @@ Class Siswa
 	edit(id)
 		try
 			get id
-			check id from table siswa
+			check idpinjaman from table pengembalianbuku
 			if data found
 				show to view
 			else
@@ -42,16 +42,16 @@ Class Siswa
 
 	update(id)
 		try
-			get nisn
-			get kelas
-			get nama
-			get alamat
-			get notelp
+			get idpengembalian
+			get idpetugas
+			get idbuku
+			get tanggalpinjam
+			get denda
 
-			if nisn are same with another data on table siswa
+			if idpinjaman are same with another data on table pengembalianbuku
 				show alert "Ditemukan data dengan nisn yang sama"
 			else
-				update record to table siswa 
+				update record to table pengembalianbuku 
 				index() with alert "Data berhasil diubah"
 		catch
 			get exception
@@ -59,9 +59,9 @@ Class Siswa
 	delete(id)
 		try
 			get id
-			check id from table siswa
+			check idpinjaman from table pengembalianbuku
 			if data found
-				delete data from table siswa
+				delete data from table pengembalianbuku
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"

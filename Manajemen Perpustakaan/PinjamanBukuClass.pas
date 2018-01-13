@@ -1,8 +1,8 @@
-Class PetugasPerpustakaan
+Class PinjamanBuku
 
 	index()
 		try
-			select all data from table petugasperpustakaan
+			select all data from table pinjamanbuku
 			show to view
 		catch
 			get exception
@@ -15,17 +15,16 @@ Class PetugasPerpustakaan
 
 	store()
 		try
+			get idpinjaman
 			get idpetugas
-			get nama
-			get alamat
-			get gender
-			get tgl_lahir
-			get notelp
+			get idbuku
+			get tanggalpinjam
+			get lamapinjam
 
-			if idpetugas are exists on table petugasperpustakaan
-				show alert "Data dengan idpetugas tidak boleh sama"
+			if idpinjaman are exists on table pinjamanbuku
+				show alert "Data dengan idpinjaman tidak boleh sama"
 			else
-				save record to table petugasperpustakaan
+				save record to table pinjamanbuku
 				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
@@ -33,7 +32,7 @@ Class PetugasPerpustakaan
 	edit(id)
 		try
 			get id
-			check id from table petugasperpustakaan
+			check idpinjaman from table pinjamanbuku
 			if data found
 				show to view
 			else
@@ -43,17 +42,16 @@ Class PetugasPerpustakaan
 
 	update(id)
 		try
+			get idpinjaman
 			get idpetugas
-			get nama
-			get alamat
-			get gender
-			get tgl_lahir
-			get notelp
+			get idbuku
+			get tanggalpinjam
+			get lamapinjam
 
-			if idpetugas are same with another data on table petugasperpustakaan
+			if idpinjaman are same with another data on table pinjamanbuku
 				show alert "Ditemukan data dengan nisn yang sama"
 			else
-				update record to table petugasperpustakaan 
+				update record to table pinjamanbuku 
 				index() with alert "Data berhasil diubah"
 		catch
 			get exception
@@ -61,9 +59,9 @@ Class PetugasPerpustakaan
 	delete(id)
 		try
 			get id
-			check id from table petugasperpustakaan
+			check idpinjaman from table pinjamanbuku
 			if data found
-				delete data from table petugasperpustakaan
+				delete data from table pinjamanbuku
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"

@@ -33,7 +33,7 @@ Class SlipGaji
 	edit(id)
 		try
 			get id
-			check id from table slipgaji
+			check no slip from table slipgaji
 			if data found
 				show to view
 			else
@@ -61,7 +61,7 @@ Class SlipGaji
 	delete(id)
 		try
 			get id
-			check id from table slipgaji
+			check no slip from table slipgaji
 			if data found
 				delete data from table slipgaji
 				index() with alert "Data berhasil dihapus"

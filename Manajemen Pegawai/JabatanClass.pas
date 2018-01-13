@@ -30,7 +30,7 @@ Class Jabatan
 	edit(id)
 		try
 			get id
-			check id from table jabatan
+			check Kode Jabatan from table jabatan
 			if data found
 				show to view
 			else
@@ -55,7 +55,7 @@ Class Jabatan
 	delete(id)
 		try
 			get id
-			check id from table jabatan
+			check Kode Jabatan from table jabatan
 			if data found
 				delete data from table jabatan
 				index() with alert "Data berhasil dihapus"

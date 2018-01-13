@@ -1,8 +1,8 @@
-Class PengembalianBuku
+Class PetugasPerpustakaan
 
 	index()
 		try
-			select all data from table pengembalianbuku
+			select all data from table petugasperpustakaan
 			show to view
 		catch
 			get exception
@@ -15,16 +15,17 @@ Class PengembalianBuku
 
 	store()
 		try
-			get idpengembalian
 			get idpetugas
-			get idbuku
-			get tanggalpinjam
-			get denda
+			get nama
+			get alamat
+			get gender
+			get tgl_lahir
+			get notelp
 
-			if idpengembalian are exists on table pengembalianbuku
-				show alert "Data dengan idpengembalian tidak boleh sama"
+			if idpetugas are exists on table petugasperpustakaan
+				show alert "Data dengan idpetugas tidak boleh sama"
 			else
-				save record to table pengembalianbuku
+				save record to table petugasperpustakaan
 				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
@@ -32,7 +33,7 @@ Class PengembalianBuku
 	edit(id)
 		try
 			get id
-			check id from table pengembalianbuku
+			check idpetugas from table petugasperpustakaan
 			if data found
 				show to view
 			else
@@ -42,16 +43,17 @@ Class PengembalianBuku
 
 	update(id)
 		try
-			get idpengembalian
 			get idpetugas
-			get idbuku
-			get tanggalpinjam
-			get denda
+			get nama
+			get alamat
+			get gender
+			get tgl_lahir
+			get notelp
 
-			if idpinjaman are same with another data on table pengembalianbuku
+			if idpetugas are same with another data on table petugasperpustakaan
 				show alert "Ditemukan data dengan nisn yang sama"
 			else
-				update record to table pengembalianbuku 
+				update record to table petugasperpustakaan 
 				index() with alert "Data berhasil diubah"
 		catch
 			get exception
@@ -59,9 +61,9 @@ Class PengembalianBuku
 	delete(id)
 		try
 			get id
-			check id from table pengembalianbuku
+			check idpetugas from table petugasperpustakaan
 			if data found
-				delete data from table pengembalianbuku
+				delete data from table petugasperpustakaan
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"

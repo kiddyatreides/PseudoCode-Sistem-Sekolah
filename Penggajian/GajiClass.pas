@@ -36,7 +36,7 @@ Class Gaji
 	edit(id)
 		try
 			get id
-			check id from table gaji
+			check ID Gaji from table gaji
 			if data found
 				show to view
 			else
@@ -67,7 +67,7 @@ Class Gaji
 	delete(id)
 		try
 			get id
-			check id from table gaji
+			check ID Gaji from table gaji
 			if data found
 				delete data from table gaji
 				index() with alert "Data berhasil dihapus"

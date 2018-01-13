@@ -31,7 +31,7 @@ Class DaftarPengunjung
 	edit(id)
 		try
 			get id
-			check id from table daftarpengunjung
+			check idkunjungan from table daftarpengunjung
 			if data found
 				show to view
 			else
@@ -57,7 +57,7 @@ Class DaftarPengunjung
 	delete(id)
 		try
 			get id
-			check id from table daftarpengunjung
+			check idkunjungan from table daftarpengunjung
 			if data found
 				delete data from table daftarpengunjung
 				index() with alert "Data berhasil dihapus"

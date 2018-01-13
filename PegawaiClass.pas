@@ -1,30 +1,34 @@
-Class TataUsaha
+Class Pegawai
 
 	index()
 		try
-			select all data from table tatausaha
+			select all data from table pegawai join from table jabatan
 			show to view
 		catch
 			get exception
 
 	create()
 		try
+			select all data from table jabatan
 			show view add data
 		catch
 			get exception
 
 	store()
 		try
+			get nama
 			get NIP
-			get Nama
-			get Gender
 			get Alamat
-			get No Telp
+			get Riwayat Pendidikan
+			get Notelp
+			get Gender
+			get Kode Golongan
+			get Kode Jabatan
 
-			if NIP are exists on table tatausaha
-				show alert "Data dengan NIP tidak boleh sama"
+			if NIP are exists
+				show alert "Data dengan NIP sama tidak boleh"
 			else
-				save record to table guru
+				save record to table pegawai
 				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
@@ -32,7 +36,7 @@ Class TataUsaha
 	edit(id)
 		try
 			get id
-			check id from table tatausaha
+			check NIP from table pegawai
 			if data found
 				show to view
 			else
@@ -42,26 +46,29 @@ Class TataUsaha
 
 	update(id)
 		try
+			get nama
 			get NIP
-			get Nama
-			get Gender
 			get Alamat
-			get No Telp
+			get Riwayat Pendidikan
+			get Notelp
+			get Gender
+			get Kode Golongan
+			get Kode Jabatan
 
-			if NIP are same with another data on table tatausaha
+			if NIP are same with another data from table pegawai
 				show alert "Ditemukan data dengan NIP yang sama"
 			else
-				update record to table tatausaha
-				index() with alert "Data berhasil diubah"
+				update record to database
+				index()  with alert "Data berhasil diubah"
 		catch
 			get exception
 
 	delete(id)
 		try
 			get id
-			check id from table tatausaha
+			check NIP from table pegawai
 			if data found
-				delete data from table tatausaha
+				delete data from table pegawai
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"

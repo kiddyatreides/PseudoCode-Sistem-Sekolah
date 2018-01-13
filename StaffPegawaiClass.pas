@@ -33,7 +33,7 @@ Class StaffPegawai
 	edit(id)
 		try
 			get id
-			check id from table staffpegawai
+			check ID Staff from table staffpegawai
 			if data found
 				show to view
 			else
@@ -60,7 +60,7 @@ Class StaffPegawai
 	delete(id)
 		try
 			get id
-			check id from table staffpegawai
+			check ID Staff from table staffpegawai
 			if data found
 				delete data from table staffpegawai
 				index() with alert "Data berhasil dihapus"
