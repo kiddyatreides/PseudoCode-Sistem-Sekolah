@@ -29,7 +29,7 @@ Class Pegawai
 				show alert "Data dengan NIP sama tidak boleh"
 			else
 				save record to table pegawai
-				index()
+				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
 
@@ -58,8 +58,8 @@ Class Pegawai
 			if NIP are same with another data from table pegawai
 				show alert "Ditemukan data dengan NIP yang sama"
 			else
-				update record to database with alert "Data berhasil diubah"
-				index()
+				update record to database
+				index()  with alert "Data berhasil diubah"
 		catch
 			get exception
 

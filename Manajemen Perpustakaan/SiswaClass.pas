@@ -1,8 +1,8 @@
-Class Jabatan
+Class Siswa
 
 	index()
 		try
-			select all data from table jabatan
+			select all data from table siswa
 			show to view
 		catch
 			get exception
@@ -15,14 +15,16 @@ Class Jabatan
 
 	store()
 		try
-			get Kode Jabatan
-			get Nama Jabatan
-			get Jumlah Pegawai
+			get nisn
+			get kelas
+			get nama
+			get alamat
+			get notelp
 
-			if Kode Jabatan are exists
-				show alert "Data dengan Kode Jabatan tidak boleh sama"
+			if nisn are exists on table siswa
+				show alert "Data dengan nisn tidak boleh sama"
 			else
-				save record to table jabatan
+				save record to table siswa
 				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
@@ -30,7 +32,7 @@ Class Jabatan
 	edit(id)
 		try
 			get id
-			check id from table jabatan
+			check id from table siswa
 			if data found
 				show to view
 			else
@@ -40,14 +42,16 @@ Class Jabatan
 
 	update(id)
 		try
-			get Kode Jabatan
-			get Nama Jabatan
-			get Jumlah Pegawai
+			get nisn
+			get kelas
+			get nama
+			get alamat
+			get notelp
 
-			if Kode Jabatan are same with another data in table jabatan
-				show alert "Ditemukan data dengan Kode Jabatan yang sama"
+			if nisn are same with another data on table siswa
+				show alert "Ditemukan data dengan nisn yang sama"
 			else
-				update record to database with alert
+				update record to table siswa 
 				index() with alert "Data berhasil diubah"
 		catch
 			get exception
@@ -55,9 +59,9 @@ Class Jabatan
 	delete(id)
 		try
 			get id
-			check id from table jabatan
+			check id from table siswa
 			if data found
-				delete data from table jabatan
+				delete data from table siswa
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"

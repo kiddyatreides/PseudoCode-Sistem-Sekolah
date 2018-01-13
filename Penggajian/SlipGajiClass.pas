@@ -26,7 +26,7 @@ Class SlipGaji
 				show alert "Data dengan no slip tidak boleh sama"
 			else
 				save record to table slipgaji
-				index()
+				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
 
@@ -53,8 +53,8 @@ Class SlipGaji
 			if no slip are same with another data on table slipgaji
 				show alert "Ditemukan data dengan no slip yang sama"
 			else
-				update record to table slipgaji with alert "Data berhasil diubah"
-				index()
+				update record to table slipgaji
+				index() with alert "Data berhasil diubah"
 		catch
 			get exception
 

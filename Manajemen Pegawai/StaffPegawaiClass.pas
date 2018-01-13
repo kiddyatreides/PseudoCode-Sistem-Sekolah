@@ -26,7 +26,7 @@ Class StaffPegawai
 				show alert "Data dengan ID Staff Pegawai tidak boleh sama"
 			else
 				save record to table staffpegawai
-				index()
+				index()  with alert "Data berhasil disimpan"
 		catch
 			get exception
 
@@ -52,8 +52,8 @@ Class StaffPegawai
 			if NIP are same with another data on table staffpegawai
 				show alert "Ditemukan data dengan ID Staff Pegawai yang sama"
 			else
-				update record to table staffpegawai with alert "Data berhasil diubah"
-				index()
+				update record to table staffpegawai
+				index() with alert "Data berhasil diubah"
 		catch
 			get exception
 

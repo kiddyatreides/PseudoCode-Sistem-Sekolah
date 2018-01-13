@@ -25,7 +25,7 @@ Class TataUsaha
 				show alert "Data dengan NIP tidak boleh sama"
 			else
 				save record to table guru
-				index()
+				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
 
@@ -51,8 +51,8 @@ Class TataUsaha
 			if NIP are same with another data on table tatausaha
 				show alert "Ditemukan data dengan NIP yang sama"
 			else
-				update record to table tatausaha with alert "Data berhasil diubah"
-				index()
+				update record to table tatausaha
+				index() with alert "Data berhasil diubah"
 		catch
 			get exception
 

@@ -29,7 +29,7 @@ Class Gaji
 				show alert "Data dengan ID Gaji tidak boleh sama"
 			else
 				save record to table gaji
-				index()
+				index() with alert "Data berhasil disimpan"
 		catch
 			get exception
 
@@ -59,8 +59,8 @@ Class Gaji
 			if ID Gaji are same with another data on table gaji
 				show alert "Ditemukan data dengan ID Gaji yang sama"
 			else
-				update record to table gaji with alert "Data berhasil diubah"
-				index()
+				update record to table gaji 
+				index() with alert "Data berhasil diubah"
 		catch
 			get exception
 
