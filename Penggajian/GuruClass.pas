@@ -1,34 +1,32 @@
-Class Pegawai
+Class Guru
 
 	index()
 		try
-			select all data from table pegawai join from table jabatan
+			select all data from table guru
 			show to view
 		catch
 			get exception
 
 	create()
 		try
-			select all data from table jabatan
 			show view add data
 		catch
 			get exception
 
 	store()
 		try
-			get nama
 			get NIP
+			get Umur
+			get Gender
+			get ID Guru
+			get Nama
 			get Alamat
 			get Riwayat Pendidikan
-			get Notelp
-			get Gender
-			get Kode Golongan
-			get Kode Jabatan
 
-			if NIP are exists
-				show alert "Data dengan NIP sama tidak boleh"
+			if NIP are exists on table guru
+				show alert "Data dengan NIP tidak boleh sama"
 			else
-				save record to table pegawai
+				save record to table guru
 				index()
 		catch
 			get exception
@@ -36,7 +34,7 @@ Class Pegawai
 	edit(id)
 		try
 			get id
-			check id from table pegawai
+			check id from table Guru
 			if data found
 				show to view
 			else
@@ -46,19 +44,18 @@ Class Pegawai
 
 	update(id)
 		try
-			get nama
-			get NIP
+		get NIP
+			get Umur
+			get Gender
+			get ID Guru
+			get Nama
 			get Alamat
 			get Riwayat Pendidikan
-			get Notelp
-			get Gender
-			get Kode Golongan
-			get Kode Jabatan
 
-			if NIP are same with another data from table pegawai
+			if NIP are same with another data on table guru
 				show alert "Ditemukan data dengan NIP yang sama"
 			else
-				update record to database with alert "Data berhasil diubah"
+				update record to table guru with alert "Data berhasil diubah"
 				index()
 		catch
 			get exception
@@ -66,9 +63,9 @@ Class Pegawai
 	delete(id)
 		try
 			get id
-			check id from table pegawai
+			check id from table Guru
 			if data found
-				delete data from table pegawai
+				delete data from table guru
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"

@@ -22,10 +22,10 @@ Class StaffPegawai
 			get Gender
 			get NIP
 
-			if ID Staff Pegawai are exists
+			if ID Staff Pegawai are exists on table staffpegawai
 				show alert "Data dengan ID Staff Pegawai tidak boleh sama"
 			else
-				save record to database
+				save record to table staffpegawai
 				index()
 		catch
 			get exception
@@ -33,7 +33,7 @@ Class StaffPegawai
 	edit(id)
 		try
 			get id
-			check id from database
+			check id from table staffpegawai
 			if data found
 				show to view
 			else
@@ -49,10 +49,10 @@ Class StaffPegawai
 			get Gender
 			get NIP
 
-			if NIP are same with another data
+			if NIP are same with another data on table staffpegawai
 				show alert "Ditemukan data dengan ID Staff Pegawai yang sama"
 			else
-				update record to database with alert "Data berhasil diubah"
+				update record to table staffpegawai with alert "Data berhasil diubah"
 				index()
 		catch
 			get exception
@@ -60,9 +60,9 @@ Class StaffPegawai
 	delete(id)
 		try
 			get id
-			check id from database
+			check id from table staffpegawai
 			if data found
-				delete data from database
+				delete data from table staffpegawai
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"

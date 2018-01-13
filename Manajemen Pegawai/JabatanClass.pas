@@ -22,7 +22,7 @@ Class Jabatan
 			if Kode Jabatan are exists
 				show alert "Data dengan Kode Jabatan tidak boleh sama"
 			else
-				save record to database
+				save record to table jabatan
 				index()
 		catch
 			get exception
@@ -30,7 +30,7 @@ Class Jabatan
 	edit(id)
 		try
 			get id
-			check id from database
+			check id from table jabatan
 			if data found
 				show to view
 			else
@@ -44,7 +44,7 @@ Class Jabatan
 			get Nama Jabatan
 			get Jumlah Pegawai
 
-			if Kode Jabatan are same with another data
+			if Kode Jabatan are same with another data in table jabatan
 				show alert "Ditemukan data dengan Kode Jabatan yang sama"
 			else
 				update record to database with alert "Data berhasil diubah"
@@ -55,9 +55,9 @@ Class Jabatan
 	delete(id)
 		try
 			get id
-			check id from database
+			check id from table jabatan
 			if data found
-				delete data from database
+				delete data from table jabatan
 				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"
