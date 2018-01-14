@@ -28,6 +28,18 @@ Class DaftarPengunjung
 		catch
 			get exception
 
+	show(id)
+		try
+			get id
+			check nis from table daftarpengunjung
+			if data found
+				show to view
+			else
+				show alert "Data tidak ditemukan"
+		catch
+			get exception
+
+
 	edit(id)
 		try
 			get id

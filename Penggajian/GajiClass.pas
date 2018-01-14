@@ -63,15 +63,3 @@ Class Gaji
 				index() with alert "Data berhasil diubah"
 		catch
 			get exception
-
-	delete(id)
-		try
-			get id
-			check ID Gaji from table gaji
-			if data found
-				delete data from table gaji
-				index() with alert "Data berhasil dihapus"
-			else
-				show alert "Data tidak ditemukan"
-		catch
-			get exception

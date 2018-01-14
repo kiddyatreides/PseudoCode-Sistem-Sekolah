@@ -31,42 +31,12 @@ Class TransaksiPembayaran
 		catch
 			get exception
 
-	edit(id)
+	show(id)
 		try
 			get id
 			check idtransaksi from table transaksipembayaran
 			if data found
 				show to view
-			else
-				show alert "Data tidak ditemukan"
-		catch
-			get exception
-
-	update(id)
-		try
-			get nisn
-			get idtu
-			get idtransaksi
-			get semester
-			get jumlah
-			get tanggal
-			get status
-
-			if idtransaksi are same with another data on table transaksipembayaran
-				show alert "Ditemukan data dengan idtransaksi yang sama"
-			else
-				update record to table transaksipembayaran 
-				index() with alert "Data berhasil diubah"
-		catch
-			get exception
-
-	delete(id)
-		try
-			get id
-			check idtransaksi from table transaksipembayaran
-			if data found
-				delete data from table transaksipembayaran
-				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"
 		catch

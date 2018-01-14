@@ -55,15 +55,3 @@ Class PengembalianBuku
 				index() with alert "Data berhasil diubah"
 		catch
 			get exception
-
-	delete(id)
-		try
-			get id
-			check idpinjaman from table pengembalianbuku
-			if data found
-				delete data from table pengembalianbuku
-				index() with alert "Data berhasil dihapus"
-			else
-				show alert "Data tidak ditemukan"
-		catch
-			get exception

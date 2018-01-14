@@ -55,15 +55,3 @@ Class PinjamanBuku
 				index() with alert "Data berhasil diubah"
 		catch
 			get exception
-
-	delete(id)
-		try
-			get id
-			check idpinjaman from table pinjamanbuku
-			if data found
-				delete data from table pinjamanbuku
-				index() with alert "Data berhasil dihapus"
-			else
-				show alert "Data tidak ditemukan"
-		catch
-			get exception

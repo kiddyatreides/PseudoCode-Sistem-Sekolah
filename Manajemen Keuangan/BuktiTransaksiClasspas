@@ -31,42 +31,12 @@ Class BuktiTransaksi
 		catch
 			get exception
 
-	edit(id)
+	show(id)
 		try
 			get id
 			check idtransaksi from table bukti_transaksi
 			if data found
 				show to view
-			else
-				show alert "Data tidak ditemukan"
-		catch
-			get exception
-
-	update(id)
-		try
-			get idtransaksi
-			get nip
-			get nisn
-			get name
-			get kelas
-			get jumlah
-			get tanggal_transaksi
-
-			if idtransaksi are same with another data on table bukti_transaksi
-				show alert "Ditemukan data dengan idtransaksi yang sama"
-			else
-				update record to table bukti_transaksi 
-				index() with alert "Data berhasil diubah"
-		catch
-			get exception
-
-	delete(id)
-		try
-			get id
-			check idtransaksi from table bukti_transaksi
-			if data found
-				delete data from table bukti_transaksi
-				index() with alert "Data berhasil dihapus"
 			else
 				show alert "Data tidak ditemukan"
 		catch

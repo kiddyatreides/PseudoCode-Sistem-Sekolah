@@ -30,7 +30,7 @@ Class InfoSPP
 		catch
 			get exception
 
-	edit(id)
+	show(id)
 		try
 			get id
 			check idtransaksi from table info_spp
